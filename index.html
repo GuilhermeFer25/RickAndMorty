@@ -11,56 +11,62 @@
 
 <body>
   <div class="grid">
-    <div>col 1 </div>
-    <div> col 2</div>
-    <div> col 3</div>
-    <div> col 4</div>
-    <div>col 1 </div>
-    <div> col 2</div>
-    <div> col 3</div>
-    <div> col 4</div>
-  </div>
-  <img class="logo" src="./static/images/logo@2x.png" width="280" alt="" />
-  <div id="character-container">
-
-  </div>
-  <aside class="navigation">
-    <span class="asset">
+    <span class="asset top">
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="line"></span>
     </span>
-    <div class="links">
-      <span class="text">About</span>
-      <span class="text">Name</span>
+    <img class="logo" src="./static/images/logo@2x.png" width="280" alt="" />
+    <div class="social">
+      <a href="#">
+        <img src="./static/images/instagram.svg" alt="">
+      </a>
+
+      <a href="#">
+        <img src="./static/images/twitter.svg" alt="">
+      </a>
+
+      <a href="#">
+        <img src="./static/images/facebook.svg" alt="">
+      </a>
+
     </div>
-    <span class="asset">
+    <div class="navigation name">
+      <a href="#">Name</a>
+    </div>
+    <div id="character-name-conatainer" class="character-name-container">
+      <div class="character-name">
+        <h2>Rick Sanchez</h2>
+      </div>
+    </div>
+    <div id="character-image-container" class="character-image-container">
+      <img class="character-image" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="">
+    </div>
+
+    <div class="navigation about">
+      <a href="#">About</a>
+    </div>
+    <div class="character-description-container">
+      <div class="character-labels">
+        <h3 class="character-label">Genero:</h3>
+        <h3 class="character-label">Especie:</h3>
+        <h3 class="character-label">Status:</h3>
+      </div>
+    </div>
+    <span class="asset bottom">
       <span class="line"></span>
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
     </span>
-  </aside>
-  <div class="wrapper">
-    <article class="character">
-      <div class="character-grid">
-        <img class="character-image" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="">
-        <div class="character-name">
-          <h2>Rick Sanchez</h2>
-        </div>
+    <div></div>
+    <div class="learn-more">
+      <span> learn more</span>
+    </div>
 
-        <div class="character-labels">
-          <h3 class="character-label">Genero:</h3>
-          <h3 class="character-label">Especie:</h3>
-          <h3 class="character-label">Status:</h3>
-        </div>
-
-      </div>
-    </article>
+    <div class="arrow"></div>
   </div>
-
-
   <script type="module" src="./static/js/app.js"></script>
 </body>
 
