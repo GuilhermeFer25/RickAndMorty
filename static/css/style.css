@@ -1,4 +1,5 @@
 body{
+  /* height: auto; */
   margin: 0;
   background: #00a5be;
   font-family: system-ui;
@@ -7,15 +8,34 @@ body{
   margin: 0 auto 2em;
   display: block;
 }
+.grid{
+  display: grid;
+  height: 100vh; 
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "linear logo logo social" "name character-name avatar avatar" "about character-description avatar avatar" "asset-bottom learn-more arrow other-line";
+}
 .navigation{
-  transform: rotate(-90deg);
-  transform-origin: left bottom;
+  display: none;
+   transform: rotate(180deg);
+ /* transform-origin: left bottom;  */
+  writing-mode: vertical-rl; 
   position: absolute;
-  left: 4em;
-  width: 100vh;
+  left: 2em;
+  height: calc(100vh - 8em);
   bottom: 0;
   text-align: center;
   border: 1px solid red;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 4em;
+  
+}
+.navigation .text{
+  display: inline-flex;
+  /* padding: 20px 0; */
+  margin-inline: 35px;
 }
 .dot{
   width: 10px;
@@ -23,6 +43,18 @@ body{
   background: black;
   border-radius: 50%;
   display:inline-flex;
+  margin-inline: 5px;
+}
+.links{
+
+
+}
+.line{
+  margin-inline: 15px;
+  width: 2px;
+  height: 150px;
+  background: black;
+  display: inline-flex;
 }
 .wrapper{
   max-width: 1280px;
@@ -57,7 +89,7 @@ body{
    .character-grid{
      display: grid;
      grid-template-columns: 1fr 1fr;
-     grid-template-areas:"name  image " "labels  images " ;
+     grid-template-areas:"name  image " "labels  image " ;
    }
   .character-image{
     grid-area: name; 
@@ -67,6 +99,7 @@ body{
   }
   .character-name {
     text-align: left;
+    
   }
   .character-name h2{
     font-size: 50px;
@@ -75,7 +108,7 @@ body{
   }
   .character-name h2:after{
     content:"";
-    width: 87px;
+    width: 80px;
     height: 6px;
     background-color: #f7391c;
     display: inline-flex;
@@ -86,10 +119,11 @@ body{
   }
 
   .character-labels{
+    
     max-width: 300px;
     grid-area: labels;
   }
   .character-image{
-    grid-area: image;
+    grid-area: image; 
   }
  }
